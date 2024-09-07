@@ -1,4 +1,4 @@
-# flutter_spotify
+# flutter-Music-Streaming
 
 A new Flutter project.
 
