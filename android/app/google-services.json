@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584243675913",
+    "project_id": "flutter-streaming-music",
+    "storage_bucket": "flutter-streaming-music.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584243675913:android:409dec3156f2eebd8b89d8",
+        "android_client_info": {
+          "package_name": "com.example.flutter_music_streaming"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbrSZ_jDdmuWPunikvE9358Q3lRbzUPt8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
