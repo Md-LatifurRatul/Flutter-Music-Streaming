@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spotify/data/models/auth/sign_in_user_req.dart';
 import 'package:flutter_spotify/domain/usecases/auth/signin.dart';
 import 'package:flutter_spotify/presentation/pages/auth/sign_up_page.dart';
-import 'package:flutter_spotify/presentation/pages/root/root_page.dart';
+import 'package:flutter_spotify/presentation/pages/home/home_page.dart';
 import 'package:flutter_spotify/presentation/widgets/app_logo.dart';
 import 'package:flutter_spotify/presentation/widgets/basic_app_bar.dart';
 import 'package:flutter_spotify/presentation/widgets/basic_app_button.dart';
@@ -56,7 +56,7 @@ class SignInPage extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const RootPage(),
+                        builder: (context) => const HomePage(),
                       ),
                       (route) => false,
                     );

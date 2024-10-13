@@ -15,8 +15,8 @@ class AppLogo extends StatelessWidget {
       children: [
         SvgPicture.asset(
           AppVectors.logo,
-          width: 80,
-          height: 80,
+          width: 60,
+          height: 60,
           colorFilter:
               const ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
         ),
