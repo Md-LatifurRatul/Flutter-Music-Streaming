@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spotify/data/models/auth/create_user_request.dart';
-import 'package:flutter_spotify/domain/usecases/auth/signup.dart';
+import 'package:flutter_spotify/domain/usecases/auth/signup_use_case.dart';
 import 'package:flutter_spotify/presentation/pages/auth/sign_in_page.dart';
 import 'package:flutter_spotify/presentation/pages/home/home_page.dart';
 import 'package:flutter_spotify/presentation/widgets/app_logo.dart';

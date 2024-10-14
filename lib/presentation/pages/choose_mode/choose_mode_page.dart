@@ -53,89 +53,11 @@ class ChooseModePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            context
-                                .read<ThemeCubit>()
-                                .updateTheme(ThemeMode.dark);
-                          },
-                          child: ClipOval(
-                            child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                              child: Container(
-                                height: 80,
-                                width: 80,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color:
-                                      const Color(0xff30393C).withOpacity(0.5),
-                                ),
-                                child: SvgPicture.asset(
-                                  AppVectors.moon,
-                                  fit: BoxFit.none,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        const Text(
-                          'Dark Mode',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 17,
-                            color: AppColors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
+                    _chooseDarkModeTheme(context),
                     const SizedBox(
                       width: 40,
                     ),
-                    Column(
-                      children: [
-                        GestureDetector(
-                          onTap: () {
-                            context
-                                .read<ThemeCubit>()
-                                .updateTheme(ThemeMode.light);
-                          },
-                          child: ClipOval(
-                            child: BackdropFilter(
-                              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                              child: Container(
-                                height: 80,
-                                width: 80,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color:
-                                      const Color(0xff30393C).withOpacity(0.5),
-                                ),
-                                child: SvgPicture.asset(
-                                  AppVectors.sun,
-                                  fit: BoxFit.none,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 15,
-                        ),
-                        const Text(
-                          'Light Mode',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 17,
-                            color: AppColors.grey,
-                          ),
-                        ),
-                      ],
-                    ),
+                    _chooseLightModeTheme(context),
                   ],
                 ),
                 const SizedBox(
@@ -156,6 +78,86 @@ class ChooseModePage extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+
+  Widget _chooseDarkModeTheme(BuildContext context) {
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: () {
+            context.read<ThemeCubit>().updateTheme(ThemeMode.dark);
+          },
+          child: ClipOval(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+              child: Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xff30393C).withOpacity(0.5),
+                ),
+                child: SvgPicture.asset(
+                  AppVectors.moon,
+                  fit: BoxFit.none,
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        const Text(
+          'Dark Mode',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 17,
+            color: AppColors.grey,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _chooseLightModeTheme(BuildContext context) {
+    return Column(
+      children: [
+        GestureDetector(
+          onTap: () {
+            context.read<ThemeCubit>().updateTheme(ThemeMode.light);
+          },
+          child: ClipOval(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+              child: Container(
+                height: 80,
+                width: 80,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xff30393C).withOpacity(0.5),
+                ),
+                child: SvgPicture.asset(
+                  AppVectors.sun,
+                  fit: BoxFit.none,
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        const Text(
+          'Light Mode',
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 17,
+            color: AppColors.grey,
+          ),
+        ),
+      ],
     );
   }
 }

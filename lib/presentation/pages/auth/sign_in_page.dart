@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spotify/data/models/auth/sign_in_user_req.dart';
-import 'package:flutter_spotify/domain/usecases/auth/signin.dart';
+import 'package:flutter_spotify/domain/usecases/auth/signin_use_case.dart';
 import 'package:flutter_spotify/presentation/pages/auth/sign_up_page.dart';
 import 'package:flutter_spotify/presentation/pages/home/home_page.dart';
 import 'package:flutter_spotify/presentation/widgets/app_logo.dart';
@@ -96,6 +96,7 @@ class SignInPage extends StatelessWidget {
   Widget _buildPasswordField(BuildContext context) {
     return TextField(
       controller: _password,
+      obscureText: true,
       decoration: const InputDecoration(
         hintText: 'Password',
       ).applyDefaults(Theme.of(context).inputDecorationTheme),

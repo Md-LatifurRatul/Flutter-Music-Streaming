@@ -32,11 +32,20 @@ dependencies:
   dartz:
   cloud_firestore:
 
+flutter_launcher_icons:
+  image_path: "assets/images/app_icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/app_icon.png"
+  android: true
+  ios: true
+  remove_alpha_ios: true
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^4.0.0
+  flutter_launcher_icons:
 
 # The following section is specific to Flutter packages.
 flutter:

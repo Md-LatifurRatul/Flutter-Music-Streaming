@@ -31,8 +31,9 @@ class _SplashPageState extends State<SplashPage> {
       return;
     }
     Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-            builder: (context) => const FlutterMusicStreamingIntroPage()));
+      context,
+      MaterialPageRoute(
+          builder: (context) => const FlutterMusicStreamingIntroPage()),
+    );
   }
 }
